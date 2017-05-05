@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Crystal Collector!
+		</title>
+
+		<!-- JQUERY -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		crossorigin="anonymous"></script>
+
+		<!-- BOOTSTRAP -->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Raleway|Righteous" rel="stylesheet">
+
+		<!-- CUSTOM CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	</head>
+
+	<body>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6" id="instructions">
+					<h1>COLLECT THE GEMS!</h1>
+					<p>You will be given a random number at the start of the game.</p>
+					<p>There are four gems below. By clicking on a gem, you will add a specific amount of points to your total score.</p>
+					<p>You win the game by matching your total score to a random generated number, and you lose the game if your total score goes above the random number.</p>
+					<p>The value of each gem is hidden until you discover it by clicking on it!</p>
+					<p>Each time when the game starts, you'll be given a new random number to match, and each gem's value changes.</p>
+				</div>
+				<div class="col-lg-6">
+					<div class="row">
+						<div class="col-md-12 score">
+							<h2 id="winsPrint">WINS: </h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 score">
+							<h2 id="lossesPrint">LOSSES: </h2>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6 match">
+							<h2 id="randomPrint">MATCH: </h2>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12 match">
+							<h2 id="scorePrint">SCORE: 0</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-12" id="crystalGems">
+				</div>
+			</div>
+
+		</div>
+
+		<script type="text/javascript" src="assets/javascript/game.js"></script>
+	</body>
+
+</html>

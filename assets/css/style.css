@@ -1,0 +1,62 @@
+/* ********** GENERAL ********** */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	width:80%;
+	margin:4% auto;
+	background-image: url('../images/bg.png');
+	background-repeat: repeat;
+}
+
+div {
+	display: block;
+}
+
+div.instructions {
+	float:left;
+}
+
+div.score, div.match {
+	float:right;
+	width:80%;
+}
+
+div#crystalGems {
+	float:left;
+	width:80%;
+	margin:5% 7%;
+	
+
+}
+
+/* ********** TEXT ********** */
+h1, h3 {
+	font-family: 'Righteous', cursive;
+}
+
+h1 {
+	font-size: 45px;
+}
+
+h2 {
+	font-size: 30px;
+	width:50%;
+	margin-right:0px;
+}
+
+h3 {
+	font-size: 25px;
+	float:left;
+}
+
+p {
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+}
+
+/* ********** IMAGES ********** */
+img {
+	width:100px;
+}
