@@ -60,3 +60,20 @@ p {
 img {
 	width:100px;
 }
+
+img#steven {
+	padding:3%;
+}
+
+img#wait {
+	width:200px;
+}
+
+img#winImg {
+	width:100%;
+}
+
+img#loseIMG {
+	height:180px;
+	width:130px;
+}

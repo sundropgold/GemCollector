@@ -5,6 +5,7 @@ $(document).ready(function(){
 	// keep track of wins/losses
 	var wins = 0;
 	var losses = 0;
+	var roundOver = false;
 
 	// score var
 	var score;
@@ -35,6 +36,12 @@ $(document).ready(function(){
 				"assets/images/peridot.png"
 				];
 
+	// steven images put in an array
+	var stevens = ["assets/images/stevenwait.png",
+					"assets/images/stevenwin.png",
+					"assets/images/stevenlose.png"
+				]
+
 	for (var i = 0; i < gems.length; i++) {
 
 		crystalGems += "<div class='col-md-3 gems'><img class='gemImg'" +
@@ -46,13 +53,19 @@ $(document).ready(function(){
 	function setGame() {
 	// function to initialize the game/each round
 
-		// reset score to 0
+		// reset score
 		score = 0;
+
+		// display starting image
+		$('div#imgPrint').html("<img id='steven waitIMG' src='" + stevens[0] + "'/>");
+
+		// update score on each click
+		$('h2#scorePrint').html("SCORE: " + score);
+
+		roundOver = false;
 
 		// grab the random # b/t 19 & 120 that players must match
 		randomMatch = Math.floor((Math.random() * 102) + 19);
-
-
 
 		// display random #
 		$('h2#randomPrint').html("MATCH: " + randomMatch);
@@ -117,9 +130,10 @@ $(document).ready(function(){
 
 			$('#winsPrint').html("WINS: " + wins);
 
-			// reset game
-			score = 0;
-			setGame();
+			$('div#imgPrint').html("<img id='steven winIMG' src='" + stevens[1] + "'/>");
+
+			roundOver = true;
+
 		}
 
 		else if (score > randomMatch) {
@@ -130,12 +144,22 @@ $(document).ready(function(){
 
 			$('#lossesPrint').html("LOSSES: " + losses);
 
-			// reset game, use setTimeout
-			score = 0;
-			setGame();
+			$('div#imgPrint').html("<img id='steven loseIMG' src='" + stevens[2] + "'/>");
+
+			roundOver = true;
+
+		}
+
+		if (roundOver == true) {
+
+			// reset game
+			setTimeout(setGame, 1500);
+
 		}
 
 	});
+
+
 
 
 });
